@@ -10,7 +10,7 @@
    </parent>
 
    <groupId>org.jboss.aerogear.archetypes</groupId>
-   <artifactId>jboss-html5-mobile-blank-archetype</artifactId>
+   <artifactId>jboss-html5-mobile-archetype</artifactId>
    <version>7.1.3-SNAPSHOT</version>
    <packaging>maven-archetype</packaging>
 
