@@ -66,11 +66,11 @@ release()
    $DIR/release-utils.sh -u -o $SNAPSHOTVERSION -n $RELEASEVERSION
    git commit -a -m "Prepare for $RELEASEVERSION release"
    git tag -a $RELEASEVERSION -m "Tag $RELEASEVERSION"
-   if [$USE_STAGE]
+   if [[ -z "$USE_STAGE" ]]
    then
-      $DIR/release-utils.sh -t
-   else
       $DIR/release-utils.sh -r
+   else
+      $DIR/release-utils.sh -t
    fi
    echo "Cleaning Archetypes"
    $DIR/release-utils.sh -c
@@ -92,7 +92,7 @@ SNAPSHOTVERSION="UNDEFINED"
 RELEASEVERSION="UNDEFINED"
 NEWSNAPSHOTVERSION="UNDEFINED"
 
-while getopts “n:r:s:” OPTION
+while getopts “n:r:s:t” OPTION
 
 do
      case $OPTION in

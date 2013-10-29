@@ -111,8 +111,8 @@ stage()
 {
    for archetype in $ARCHETYPES
    do
-      echo "\n**** Deploying $archetype to ${RELEASE_REPO_URL} \n"
-      mvn -f ${archetype}/pom.xml org.sonatype.plugins:nexus-staging-maven-plugin:deploy -Dautomatic=true -DnexusUrl=https://repository.jboss.org/nexus -DserverId=jboss-releases-repository  -Prelease
+      echo "\n**** Deploying $archetype to https://repository.jboss.org/nexus \n"
+      mvn -f ${archetype}/pom.xml deploy org.sonatype.plugins:nexus-staging-maven-plugin:deploy -Dautomatic=true -DnexusUrl=https://repository.jboss.org/nexus -DserverId=jboss-releases-repository -Prelease
    done
 
 }
@@ -122,7 +122,7 @@ NEWVERSION="1.0.0-SNAPSHOT"
 CMD="usage"
 DEST=""
 
-while getopts “crl:uo:n:” OPTION
+while getopts “crl:uo:n:t” OPTION
 
 do
      case $OPTION in
