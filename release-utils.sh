@@ -109,6 +109,7 @@ release()
 
 stage()
 {
+   rm -rf ./local-stage
    for archetype in $ARCHETYPES
    do
       echo "\n**** Deploying $archetype to https://repository.jboss.org/nexus \n"
