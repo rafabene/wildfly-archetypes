@@ -86,7 +86,7 @@
                     <projectGitRepo>git://github.com/jboss-developer/jboss-eap-quickstarts.git</projectGitRepo>
                     <projectPath>kitchensink</projectPath>
                     <rootPackage>org.jboss.as.quickstarts.kitchensink</rootPackage>
-                    <branch>master</branch>
+                    <branch>6.2.0.GA</branch>
                     <archetypeExpressionReplaceValues>
                         <archetypeExpressionReplaceValue>jboss-kitchensink</archetypeExpressionReplaceValue>
                         <archetypeExpressionReplaceValue>kitchensink-quickstart</archetypeExpressionReplaceValue>

@@ -99,7 +99,7 @@
                     <projectPath>kitchensink-ear</projectPath>
                     <rootPackage>org.jboss.as.quickstarts.kitchensink_ear</rootPackage>
                     <multiModuleProject>true</multiModuleProject>
-                    <branch>master</branch>
+                    <branch>6.2.0.GA</branch>
                     <archetypeExpressionReplaceValues>
                         <archetypeExpressionReplaceValue>jboss-kitchensink-ear</archetypeExpressionReplaceValue>
                         <archetypeExpressionReplaceValue>kitchensink-ear-quickstart</archetypeExpressionReplaceValue>
