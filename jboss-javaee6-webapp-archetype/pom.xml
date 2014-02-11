@@ -77,34 +77,45 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.jboss.maven.plugins</groupId>
-                <artifactId>maven-qstools-plugin</artifactId>
-                <version>1.4.0.CR2</version>
-                <configuration>
-                    <projectGitRepo>git://github.com/jboss-developer/jboss-eap-quickstarts.git</projectGitRepo>
-                    <projectPath>kitchensink</projectPath>
-                    <rootPackage>org.jboss.as.quickstarts.kitchensink</rootPackage>
-                    <branch>6.2.0.GA</branch>
-                    <applyPatch>jboss-repositories-webapp.diff</applyPatch>
-                    <archetypeExpressionReplaceValues>
-                        <archetypeExpressionReplaceValue>jboss-kitchensink</archetypeExpressionReplaceValue>
-                        <archetypeExpressionReplaceValue>kitchensink-quickstart</archetypeExpressionReplaceValue>
-                        <archetypeExpressionReplaceValue>KitchensinkQuickstart</archetypeExpressionReplaceValue>
-                        <archetypeExpressionReplaceValue>JBoss EAP Quickstart: kitchensink</archetypeExpressionReplaceValue>
-                    </archetypeExpressionReplaceValues>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>archetypeSync</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+
     </build>
+
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jboss.maven.plugins</groupId>
+                        <artifactId>maven-qstools-plugin</artifactId>
+                        <version>1.4.0.CR2</version>
+                        <configuration>
+                            <projectGitRepo>git://github.com/jboss-developer/jboss-eap-quickstarts.git</projectGitRepo>
+                            <projectPath>kitchensink</projectPath>
+                            <rootPackage>org.jboss.as.quickstarts.kitchensink</rootPackage>
+                            <branch>6.2.0.GA</branch>
+                            <applyPatch>jboss-repositories-webapp.diff</applyPatch>
+                            <archetypeExpressionReplaceValues>
+                                <archetypeExpressionReplaceValue>jboss-kitchensink</archetypeExpressionReplaceValue>
+                                <archetypeExpressionReplaceValue>kitchensink-quickstart</archetypeExpressionReplaceValue>
+                                <archetypeExpressionReplaceValue>KitchensinkQuickstart</archetypeExpressionReplaceValue>
+                                <archetypeExpressionReplaceValue>JBoss EAP Quickstart: kitchensink</archetypeExpressionReplaceValue>
+                            </archetypeExpressionReplaceValues>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>archetypeSync</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

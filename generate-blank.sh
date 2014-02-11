@@ -75,8 +75,11 @@ EOF
 
    perl -pi -e "s/${ARCHETYPE_NAME}/${ARCHETYPE_BLANK_NAME}/g" `find . -name pom.xml`
 
+   #Disable archetypeSynch profile (it was already synched on non-blank-archetype)
+   perl -pi -e "s/<activeByDefault>true<\/activeByDefault>/<activeByDefault>false<\/activeByDefault>/g" `find . -name pom.xml`
+ 
 }
-
+  
 ALL=0
 CLEAN=0
 
