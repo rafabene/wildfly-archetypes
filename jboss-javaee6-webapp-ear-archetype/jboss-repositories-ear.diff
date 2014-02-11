@@ -1,0 +1,43 @@
+diff --git a/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/ejb/pom.xml b/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/ejb/pom.xml
+index 05022a5..abbbecc 100644
+--- a/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/ejb/pom.xml
++++ b/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/ejb/pom.xml
+@@ -121,7 +121,9 @@
+                 Arquillian tests that execute in the specified container -->
+             <id>default</id>
+             <activation>
+-                <activeByDefault>true</activeByDefault>
++                <property>
++                    <name>!default</name>
++                </property>
+             </activation>
+             <build>
+                 <plugins>
+diff --git a/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/pom.xml b/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/pom.xml
+index 41a4b55..8479677 100644
+--- a/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/pom.xml
++++ b/jboss-javaee6-webapp-ear-archetype/src/main/resources/archetype-resources/pom.xml
+@@ -132,5 +132,23 @@
+             </plugins>
+         </pluginManagement>
+     </build>
++    
++    <profiles>
++        <!-- Activate JBoss Product Maven repository -->
++        <profile>
++            <id>jboss-product-repository</id>
++            <activation>
++                <property>
++                    <name>!jboss-product-repository</name>
++                </property>
++            </activation>
++            <repositories>
++                <repository>
++                    <id>jboss-products-ga-repo</id>
++                    <url>http://maven.repository.redhat.com/techpreview/all/</url>
++                </repository>
++            </repositories>
++        </profile>
++    </profiles>
+ 
+ </project>

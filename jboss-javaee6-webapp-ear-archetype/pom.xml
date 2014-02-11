@@ -93,13 +93,14 @@
             <plugin>
                 <groupId>org.jboss.maven.plugins</groupId>
                 <artifactId>maven-qstools-plugin</artifactId>
-                <version>1.0.0.Final</version>
+                <version>1.4.0.CR2</version>
                 <configuration>
                     <projectGitRepo>git://github.com/jboss-developer/jboss-eap-quickstarts.git</projectGitRepo>
                     <projectPath>kitchensink-ear</projectPath>
                     <rootPackage>org.jboss.as.quickstarts.kitchensink_ear</rootPackage>
                     <multiModuleProject>true</multiModuleProject>
                     <branch>6.2.0.GA</branch>
+                    <applyPatch>jboss-repositories-ear.diff</applyPatch>
                     <archetypeExpressionReplaceValues>
                         <archetypeExpressionReplaceValue>jboss-kitchensink-ear</archetypeExpressionReplaceValue>
                         <archetypeExpressionReplaceValue>kitchensink-ear-quickstart</archetypeExpressionReplaceValue>
