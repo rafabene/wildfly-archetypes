@@ -6,10 +6,6 @@ SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-if [[ -z "$RELEASE_REPO_URL" ]]; then
-  echo "You must set the RELEASE_REPO_URL environment variable to your local checkout of https://github.com/jboss-developer/temp-maven-repo"
-  exit
-fi
 # DEFINE
 
 ARCHETYPES="wildfly-javaee7-webapp-archetype wildfly-javaee7-webapp-blank-archetype wildfly-javaee7-webapp-ear-archetype  wildfly-javaee7-webapp-ear-blank-archetype"
