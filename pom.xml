@@ -5,8 +5,8 @@
 
 
     <groupId>org.jboss.archetype</groupId>
-    <artifactId>eap-archetypes-test</artifactId>
-    <version>6.2.0-build-SNAPSHOT</version>
+    <artifactId>wildfly-archetypes-test</artifactId>
+    <version>8.1.0-build-SNAPSHOT</version>
 
     <name>Archetypes test</name>
 

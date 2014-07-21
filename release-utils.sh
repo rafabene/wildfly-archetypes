@@ -12,7 +12,7 @@ if [[ -z "$RELEASE_REPO_URL" ]]; then
 fi
 # DEFINE
 
-ARCHETYPES="jboss-javaee6-webapp-archetype jboss-javaee6-webapp-blank-archetype jboss-javaee6-webapp-ear-archetype  jboss-javaee6-webapp-ear-blank-archetype"
+ARCHETYPES="wildfly-javaee7-webapp-archetype wildfly-javaee7-webapp-blank-archetype wildfly-javaee7-webapp-ear-archetype  wildfly-javaee7-webapp-ear-blank-archetype"
 
 SNAPSHOT_REPO_ID="jboss-snapshots-repository"
 RELEASE_REPO_ID="jboss-releases-repository"
